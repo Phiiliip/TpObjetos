@@ -1,3 +1,4 @@
+import canciones.*
 
 object lucia {
 	
