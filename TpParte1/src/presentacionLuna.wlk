@@ -3,13 +3,11 @@ import lucia.*
 import luisAlberto.*
 object presentacionEnElLuna {
 
-	var dia
-	var mes
-	var anio
+	var dia = 20
+	var mes = 04
+	var anio = 2017
 	
-	var diaDeLaSemana
-	
-	var fecha = dia/mes/anio
+	var fecha = self.establecerFecha()
 	
 	var capacidad = self.calcularCapacidad()
 	
@@ -23,15 +21,12 @@ object presentacionEnElLuna {
 		return capacidad
 	}
 	
-	method establecerFechaDePresentacion(unDia,unMes,unAnio){
-		dia = unDia
-		mes = unMes
-		anio = unAnio
+	method establecerFecha(){
+		return dia/mes/anio
 	}
 	
-	method queDiaCae(){
-		return diaDeLaSemana
+	method costoDeLaPresentacion(){
+		return interpretesDeLaNoche.sum({cantante => cantante.cuantoCobra()})
 	}
-
-
+			
 }
