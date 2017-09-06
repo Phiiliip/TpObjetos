@@ -16,10 +16,6 @@ object joaquin {
 	}
 	
 	method cuantoCobra(unaPresentacion){
-		if(tocarEnGrupo()){
-			return 100
-		}else{
-			return 50
-		}
-	}
+
+}
 }

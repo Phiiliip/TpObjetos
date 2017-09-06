@@ -16,11 +16,7 @@ object lucia {
 	}
 
 	method cuantoCobra(unaPresentacion){
-		if(lugarConcurrido(unaPresentacion)){
-			return 500
-		}else{
-			400
-		}
+	
 	}
 	
 
