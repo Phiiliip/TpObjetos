@@ -8,8 +8,10 @@ object lucia {
 		habilidad =- 20
 	}
 	
+	method suHabilidad() = habilidad
+	
 	method interpretaBien(unaCancion){
-		return unaCancion.contiene("FAMILIA")
+		return unaCancion.contieneLaPalabra("familia") || unaCancion.contieneLaPalabra("FAMILIA")
 	}
 
 	method cuantoCobra(unaPresentacion){

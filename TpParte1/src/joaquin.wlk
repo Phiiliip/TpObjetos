@@ -8,6 +8,8 @@ object joaquin {
 	method tocarEnGrupo(){
 		habilidad =- 20
 	}
+	
+	method suHabilidad() = habilidad
 
 	method interpretaBien(unaCancion){
 		return unaCancion.duracion > 300
