@@ -29,7 +29,9 @@ object presentancionTrastienda {
 		return diaDeLaSemana == "sabado"
 	}
 	
-	method consultarCapacidad() = capacidad
+	method consultarCapacidad(){
+		return capacidad
+	}
 	
 	method establecerFecha(){
 		fecha = dia/mes/anio
@@ -41,6 +43,10 @@ object presentancionTrastienda {
 	
 	method costoDeLaPresentacion(){
 		return interpretesDeLaNoche.sum({cantante => cantante.cuantoCobra()})
+	}
+	
+	method esUnLugarConcurrido(){
+		return capacidad > 5000
 	}
 	
 

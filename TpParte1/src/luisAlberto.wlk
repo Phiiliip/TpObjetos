@@ -1,8 +1,9 @@
 
 object luisAlberto {
 
-	var habilidad 
-	var guitarra
+	var habilidad = self.calcularHabilidad()
+	var guitarra 
+	
 	
 	
 	
@@ -13,7 +14,11 @@ object luisAlberto {
 	}
 
 	method calcularHabilidad(){
-		
+		if(8*guitarra.UG() >100){
+			habilidad = 100
+		}else{
+			habilidad = 8*guitarra.UG()
+		}
 	}
 	
 	method cuantoCobra(unaPresentacion){
