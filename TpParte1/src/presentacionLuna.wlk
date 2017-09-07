@@ -28,5 +28,13 @@ object presentacionEnElLuna {
 	method costoDeLaPresentacion(){
 		return interpretesDeLaNoche.sum({cantante => cantante.cuantoCobra()})
 	}
+	
+	method tocaHoy(unArtista){
+		return interpretesDeLaNoche.contains(unArtista)
+	}
+	
+	method esUnLugarConcurrido(){
+		return capacidad > 5000
+	}
 			
 }
