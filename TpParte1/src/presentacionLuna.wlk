@@ -9,10 +9,9 @@ object presentacionEnElLuna {
 	var mes = 04
 	var anio = 2017
 	
-	
 	var capacidad = 9290
 	
-	const interpretesDeLaNoche = #{luisAlberto,pimpinela}
+	const interpretesDeLaNoche = #{luisAlberto,joaquin,lucia}
 	
 	
 	method consultarCapacidad(){
@@ -29,23 +28,14 @@ object presentacionEnElLuna {
 	}
 	
 	method esUnLugarConcurrido(){
-		return capacidad > 5000
+		return self.consultarCapacidad() > 5000
 	}
 	
-	method enQueMesCae(){
-		return mes
-	}
+	method enQueMesCae() = mes
 	
-	method enQueDiaCae(){
-		return dia
-	}
 	
-	method enQueAnioSeHace(){
-		return anio
-	}
-	
-	method tocanHoy(artista){
-		return interpretesDeLaNoche.contains(artista)
-	}
+	method enQueDiaCae() = dia
+
+	method enQueAnioSeHace() = anio
 			
 }

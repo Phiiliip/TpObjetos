@@ -24,8 +24,9 @@ object joaquin {
 		return unaCancion.cualEsLaDuracion()>300
 	}
 	
+	
 	method cuantoCobra(unaPresentacion){
-		if(unaPresentacion.tocanHoy(pimpinela)){
+		if(unaPresentacion.tocaHoy(lucia)){
 			return 50
 		}else{
 			return 100

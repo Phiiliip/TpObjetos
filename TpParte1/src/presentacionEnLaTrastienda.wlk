@@ -2,18 +2,19 @@ import joaquin.*
 import luisAlberto.*
 import lucia.*
 import pimpinela.*
+import pimpinela.*
 
-object presentancionEnLaTrastienda {
+object presentacionEnLaTrastienda {
 
 	var dia = 15
 	var mes = 11
 	var anio = 2017
 	
-	var diaDeLaSemana 
+	var diaDeLaSemana = "martes"
 	 	
 	var capacidad 
 	
-	const interpretesDeLaNoche = #{pimpinela,luisAlberto}
+	const interpretesDeLaNoche = #{joaquin,lucia,luisAlberto}
 		
 	method calcularCapacidad(){
 		if(self.esSabado()){
@@ -38,15 +39,15 @@ object presentancionEnLaTrastienda {
 	}
 	
 	method esUnLugarConcurrido(){
-		return capacidad > 5000
+		return self.consultarCapacidad() > 5000
 	}
 	
 	method enQueMesCae(){
 		return mes
 	}
 	
-	method tocanHoy(){
-		return interpretesDeLaNoche.contains(pimpinela)
+	method tocaHoy(artista){
+		return interpretesDeLaNoche.contains(artista)
 	}
 	
 	method enQueDiaCae(){
@@ -56,5 +57,7 @@ object presentancionEnLaTrastienda {
 	method enQueAnioCae(){
 		return anio
 	}
+	
+	method consultarCapacidad() = capacidad
 	
 }

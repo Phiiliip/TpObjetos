@@ -1,3 +1,9 @@
+import presentacionLuna.*
+import presentacionEnLaTrastienda.*
+import lucia.*
+import pimpinela.*
+import laFamilia.*
+import elCisne.*
 
 object luisAlberto {
 
@@ -12,6 +18,7 @@ object luisAlberto {
 	}
 	
 	method tocarConLa(unaGuitarra){
+		guitarra = unaGuitarra
 		self.calcularUnidadesGuitarra(unaGuitarra)
 		self.calcularHabilidad()
 	}
