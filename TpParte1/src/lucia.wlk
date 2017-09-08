@@ -1,19 +1,21 @@
 import presentacionLuna.*
 import presentacionEnLaTrastienda.*
 import joaquin.*
+import pimpinela.*
+import laFamilia.*
+import elCisne.*
 
 object lucia {
 	
-	var grupo = "Pimpinela"
 	var habilidad = 70
 	
-	method tocarEnGrupo(unaPresentacion){
-		if(unaPresentacion.tocaHoy(joaquin)){
-			self.modificarHabilidad(-20)
-			return true
-		}else{
-			return false
-		}
+	method tocarEnElGrupo(unGrupo){
+		self.modificarHabilidad(-20)
+	}
+	
+	method dejarElGrupo(){
+		habilidad = 70
+		pimpinela.abandonarGrupo(self)
 	}
 	
 	method suHabilidad() = habilidad

@@ -1,27 +1,57 @@
 
 object luisAlberto {
 
-	var habilidad = self.calcularHabilidad()
+	var habilidad 
 	var guitarra 
-	
-	
-	
-	
-	method suHabilidad() = habilidad
+	var unidadGuitarra = 0
+		
+	method cuantaHabilidadTiene() = habilidad
 	
 	method interpretaBien(unaCancion){
 		return true
 	}
+	
+	method tocarConLa(unaGuitarra){
+		self.calcularUnidadesGuitarra(unaGuitarra)
+		self.calcularHabilidad()
+	}
 
-	method calcularHabilidad(){
-		if(8*guitarra.UG() >100){
-			habilidad = 100
+	method calcularUnidadesGuitarra(unaGuitarra){
+		if(self.esFender(unaGuitarra)){
+			unidadGuitarra += 10
+		}else if(self.esGibson(unaGuitarra)){
+			unidadGuitarra +=15
 		}else{
-			habilidad = 8*guitarra.UG()
+			unidadGuitarra += 5
 		}
 	}
 	
 	method cuantoCobra(unaPresentacion){
+		if(unaPresentacion.enQueMesCae() < 09){
+			return 1000
+		}else{
+			return 1200
+		}
+	}
 		
+	method esFender(unaGuitarra){
+		return unaGuitarra == "fender"
+	}
+	
+	method esGibson(unaGuitarra){
+		return unaGuitarra == "gibson"
+	}
+	
+	method calcularHabilidad(){
+		if(8*unidadGuitarra >= 100){
+			habilidad = 100
+		}else{
+			habilidad = 8*unidadGuitarra
+		}
+	}
+	
+	method romperGibson(){
+		unidadGuitarra = 5
+		self.calcularHabilidad()
 	}
 }

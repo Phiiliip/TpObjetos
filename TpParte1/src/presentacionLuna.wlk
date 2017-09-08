@@ -1,32 +1,27 @@
 import joaquin.*
 import lucia.*
 import luisAlberto.*
+import pimpinela.*
+
 object presentacionEnElLuna {
 
 	var dia = 20
 	var mes = 04
 	var anio = 2017
 	
-	var fecha = self.establecerFecha()
 	
-	var capacidad = self.calcularCapacidad()
+	var capacidad = 9290
 	
-	const interpretesDeLaNoche = #{luisAlberto,joaquin,lucia}
+	const interpretesDeLaNoche = #{luisAlberto,pimpinela}
 	
-	method calcularCapacidad(){
-		return 9290
-	}
 	
 	method consultarCapacidad(){
 		return capacidad
 	}
 	
-	method establecerFecha(){
-		return dia/mes/anio
-	}
 	
 	method costoDeLaPresentacion(){
-		return interpretesDeLaNoche.sum({cantante => cantante.cuantoCobra()})
+		return interpretesDeLaNoche.sum({cantante => cantante.cuantoCobra(self)})
 	}
 	
 	method tocaHoy(unArtista){
@@ -35,6 +30,22 @@ object presentacionEnElLuna {
 	
 	method esUnLugarConcurrido(){
 		return capacidad > 5000
+	}
+	
+	method enQueMesCae(){
+		return mes
+	}
+	
+	method enQueDiaCae(){
+		return dia
+	}
+	
+	method enQueAnioSeHace(){
+		return anio
+	}
+	
+	method tocanHoy(artista){
+		return interpretesDeLaNoche.contains(artista)
 	}
 			
 }

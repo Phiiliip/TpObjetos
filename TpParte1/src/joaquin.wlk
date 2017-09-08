@@ -1,21 +1,23 @@
 import presentacionLuna.*
 import presentacionEnLaTrastienda.*
 import lucia.*
+import pimpinela.*
+import laFamilia.*
+import elCisne.*
 
 object joaquin {
 
-	var grupo = "Pimpinela"
 	var habilidad = 20
 
-	method tocarEnGrupo(unaPresentacion){
-		if(unaPresentacion.tocaHoy(lucia)){
-			self.modificarHabilidad(5)
-			return true
-		}else{
-			return false
+	method tocarEnElGrupo(unGrupo){
+			self.modificarHabilidad(5)	
 		}
+		
+	method dejarElGrupo(){
+		habilidad = 20
+		pimpinela.abandonarGrupo(self)
 	}
-	
+		
 	method suHabilidad() = habilidad
 
 	method interpretaBien(unaCancion){
@@ -23,10 +25,10 @@ object joaquin {
 	}
 	
 	method cuantoCobra(unaPresentacion){
-		if(self.tocarEnGrupo(unaPresentacion)){
-			return 100
-		}else{
+		if(unaPresentacion.tocanHoy(pimpinela)){
 			return 50
+		}else{
+			return 100
 		}
 	}
 	
@@ -34,5 +36,4 @@ object joaquin {
 		habilidad += unaCantidad
 	}
 	
-
 }

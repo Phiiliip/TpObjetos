@@ -1,53 +1,60 @@
 import joaquin.*
 import luisAlberto.*
 import lucia.*
+import pimpinela.*
 
-object presentancionTrastienda {
+object presentancionEnLaTrastienda {
 
 	var dia = 15
 	var mes = 11
 	var anio = 2017
 	
 	var diaDeLaSemana 
+	 	
+	var capacidad 
 	
-	var fecha = self.establecerFecha()
-	
-	var capacidad = self.calcularCapacidad()
-	
-	var interpretesDeLaNoche = #{joaquin,luisAlberto,lucia}
-	
-	
+	const interpretesDeLaNoche = #{pimpinela,luisAlberto}
+		
 	method calcularCapacidad(){
 		if(self.esSabado()){
-			return 700
+			capacidad = 700
+			return capacidad
 		}else{
-			return 400
+			capacidad = 400
+			return capacidad
 		}
 	}
 
 	method esSabado(){
-		return diaDeLaSemana == "sabado"
+		return diaDeLaSemana == "sabado" || diaDeLaSemana == "SABADO"
 	}
-	
-	method consultarCapacidad(){
-		return capacidad
-	}
-	
-	method establecerFecha(){
-		fecha = dia/mes/anio
-	}
-	
+			
 	method establecerElDiaQueCae(elDia){
 		diaDeLaSemana = elDia
 	}
 	
 	method costoDeLaPresentacion(){
-		return interpretesDeLaNoche.sum({cantante => cantante.cuantoCobra()})
+		return interpretesDeLaNoche.sum({cantante => cantante.cuantoCobra(self)})
 	}
 	
 	method esUnLugarConcurrido(){
 		return capacidad > 5000
 	}
 	
-
+	method enQueMesCae(){
+		return mes
+	}
+	
+	method tocanHoy(){
+		return interpretesDeLaNoche.contains(pimpinela)
+	}
+	
+	method enQueDiaCae(){
+		return dia
+	}
+	
+	method enQueAnioCae(){
+		return anio
+	}
+	
 }
