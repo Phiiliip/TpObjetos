@@ -40,6 +40,7 @@ test "Lucia canta en el grupo Pimpinela, deja el grupo y queda con 70 de habilid
 
 test "Luis Alberto toca con la Fender y queda con 80 de habilidad" {
 	
+	//no toma a fender como un objeto
 	luisAlberto.esFender(fender)
 	luisAlberto.tocarConLa(fender)
 	assert.equals(luisAlberto.cuantaHabilidadTiene(),80)
