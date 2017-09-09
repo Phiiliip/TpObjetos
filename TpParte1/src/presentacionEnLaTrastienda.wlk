@@ -14,7 +14,7 @@ object presentacionEnLaTrastienda {
 	 	
 	var capacidad 
 	
-	const interpretesDeLaNoche = #{joaquin,lucia,luisAlberto}
+	var interpretesDeLaNoche = #{joaquin,lucia,luisAlberto}
 		
 	method calcularCapacidad(){
 		if(self.esSabado()){
