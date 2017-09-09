@@ -11,7 +11,7 @@ object presentacionEnElLuna {
 	
 	var capacidad = 9290
 	
-	const interpretesDeLaNoche = #{luisAlberto,joaquin,lucia}
+	var interpretesDeLaNoche = #{luisAlberto,joaquin,lucia}
 	
 	
 	method consultarCapacidad(){
