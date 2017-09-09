@@ -1,3 +1,4 @@
+import guitarra.*
 import presentacionLuna.*
 import presentacionEnLaTrastienda.*
 import lucia.*
@@ -27,4 +28,20 @@ test "Lucia canta en el grupo Pimpinela y queda con 50 de habilidad" {
 	lucia.tocarEnElGrupo(pimpinela)
 	assert.equals(lucia.suHabilidad(),50)
 
+}
+
+test "Lucia canta en el grupo Pimpinela, deja el grupo y queda con 70 de habilidad" {
+	
+	lucia.tocarEnElGrupo(pimpinela)
+	lucia.dejarElGrupo()
+	assert.equals(lucia.suHabilidad(),70)
+
+}
+
+test "Luis Alberto toca con la Fender y queda con 80 de habilidad" {
+	
+	luisAlberto.esFender(fender)
+	luisAlberto.tocarConLa(fender)
+	assert.equals(luisAlberto.cuantaHabilidadTiene(),80)
+	
 }
