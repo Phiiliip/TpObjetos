@@ -1,0 +1,30 @@
+import presentacionLuna.*
+import presentacionEnLaTrastienda.*
+import lucia.*
+import joaquin.*
+import luisAlberto.*
+import pimpinela.*
+import laFamilia.*
+import elCisne.*
+
+test "Joaquín canta en el grupo Pimpinela y queda con 25 de habilidad" {
+	
+	joaquin.tocarEnElGrupo(pimpinela)
+	assert.equals(joaquin.suHabilidad(),25)
+
+}
+
+test "Joaquín canta en el grupo Pimpinela, deja el grupo y queda con 20 de habilidad" {
+	
+	joaquin.tocarEnElGrupo(pimpinela)
+	joaquin.dejarElGrupo()
+	assert.equals(joaquin.suHabilidad(),20)
+
+}
+
+test "Lucia canta en el grupo Pimpinela y queda con 50 de habilidad" {
+	
+	lucia.tocarEnElGrupo(pimpinela)
+	assert.equals(lucia.suHabilidad(),50)
+
+}
