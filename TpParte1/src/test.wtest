@@ -7,158 +7,163 @@ import pimpinela.*
 import laFamilia.*
 import elCisne.*
 
-test "Joaquín canta en el grupo Pimpinela y queda con 25 de habilidad" {
+describe "Los Tests"{
 	
-	joaquin.tocarEnElGrupo(pimpinela)
-	assert.equals(joaquin.suHabilidad(),25)
-
-}
-
-test "Joaquín canta en el grupo Pimpinela, deja el grupo y queda con 20 de habilidad" {
+	test "Joaquín canta en el grupo Pimpinela y queda con 25 de habilidad" {
+		
+		joaquin.tocarEnElGrupo(pimpinela)
+		assert.equals(joaquin.suHabilidad(),25)
+		
+		}
 	
-	joaquin.tocarEnElGrupo(pimpinela)
-	joaquin.dejarElGrupo()
-	assert.equals(joaquin.suHabilidad(),20)
-
-}
-
-test "Lucia canta en el grupo Pimpinela y queda con 50 de habilidad" {
-	
-	lucia.tocarEnElGrupo(pimpinela)
-	assert.equals(lucia.suHabilidad(),50)
-
-}
-
-test "Lucia canta en el grupo Pimpinela, deja el grupo y queda con 70 de habilidad" {
-	
-	lucia.tocarEnElGrupo(pimpinela)
-	lucia.dejarElGrupo()
-	assert.equals(lucia.suHabilidad(),70)
-
-}
-
-test "Luis Alberto toca con la Fender y queda con 80 de habilidad" {
-	
-	luisAlberto.tocarConLa("fender")
-	assert.equals(luisAlberto.cuantaHabilidadTiene(),80)
-	
-}
-
-test "Luis Alberto toca con la Gibson sana y queda con 100 de habilidad" {
-	
-	luisAlberto.tocarConLa("gibson")
-	assert.equals(luisAlberto.cuantaHabilidadTiene(),100)
-	
-}
-
-test "Una persona rompe la Gibson y queda con 40 de habilidad" {
-	
-	luisAlberto.tocarConLa("gibson")
-	luisAlberto.romperGibson()
-	assert.equals(luisAlberto.cuantaHabilidadTiene(),40)
-	
-}
-
-test "Joaquín no interpreta bien la canción “La Familia“" {
-	
-	joaquin.interpretaBien(laFamilia)
-	assert.notThat(false)
-	
-}
-
-test "Joaquín interpreta bien la canción “Cisne“" {
-	
-	joaquin.interpretaBien(elCisne)
-	assert.that(true)
-	
-}
-
-test "Lucia interpreta bien la canción “La Familia“" {
-	
-	lucia.interpretaBien(laFamilia)
-	assert.that(true)
-	
-}
-
-test "Lucia no interpreta bien la canción “Cisne“" {
-	
-	lucia.interpretaBien(elCisne)
-	assert.notThat(false)
-	
-}
-
-test "Luis Alberto interpreta bien la canción “La Familia“" {
-	
-	luisAlberto.interpretaBien(laFamilia)
-	assert.that(true)
-	
-}
-
-test "Luis Alberto interpreta bien la canción “Cisne“" {
-	
-	luisAlberto.interpretaBien(elCisne)
-	assert.that(true)
-	
-}
-
-test "Joaquín por la presentación del Luna Park cobra 50p" {
-	
-	assert.equals(joaquin.cuantoCobra(presentacionEnElLuna),50)
-	
-}
-
-test "Joaquín actua solo en la presentación de la Trastienda del 15/11/2017 y cobra 100p" {
-	
-	presentacionEnLaTrastienda.joaquinActuaSolo()
-	assert.equals(joaquin.cuantoCobra(presentacionEnLaTrastienda),100)
-	
-}
-
-test "la capacidad de La Trastienda para el 05 de agosto del 2017 es de 700 personas" {
-	
-	presentacionEnLaTrastienda.establecerElDiaQueCae("sabado")
-	assert.equals(presentacionEnLaTrastienda.calcularCapacidad(),700)
-	
-}
-
-test "la capacidad de La Trastienda para el 08 de agosto del 2017 es de 400 personas" {
-	
-	assert.equals(presentacionEnLaTrastienda.calcularCapacidad(),400)
-	
-}
-
-test "Lucia por la presentación del Luna Park cobra 500p" {
-	
-	assert.equals(lucia.cuantoCobra(presentacionEnElLuna),500)
-	
-}
-
-test "Lucia por la presentación de la Trastienda cobra 400p" {
-	
-	assert.equals(lucia.cuantoCobra(presentacionEnLaTrastienda),400)
-	
-}
-
-test "Luis Alberto por la presentación del Luna Park cobra 1000p" {
-	
-	assert.equals(luisAlberto.cuantoCobra(presentacionEnElLuna),1000)
-	
-}
-
-test "Luis Alberto por la presentación de La Trastienda cobra 1200p" {
-	
-	assert.equals(luisAlberto.cuantoCobra(presentacionEnLaTrastienda),1200)
-	
-}
-
-test "El costo de la presentacion en el Luna Park es de 1550p" {
-	
-	assert.equals(presentacionEnElLuna.costoDeLaPresentacion(),1550)
-	
-}
-
-test "El costo de la presentacion en La Trastienda del 15/11/2017 es de 1650p" {
-	
-	assert.equals(presentacionEnLaTrastienda.costoDeLaPresentacion(),1650)
-	
+	test "Joaquín canta en el grupo Pimpinela, deja el grupo y queda con 20 de habilidad" {
+		
+		joaquin.tocarEnElGrupo(pimpinela)
+		joaquin.dejarElGrupo()
+		assert.equals(joaquin.suHabilidad(),20)
+		
+		}
+		
+	test "Lucia canta en el grupo Pimpinela y queda con 50 de habilidad" {
+		
+		lucia.tocarEnElGrupo(pimpinela)
+		assert.equals(lucia.suHabilidad(),50)
+		
+		}
+		
+	test "Lucia canta en el grupo Pimpinela, deja el grupo y queda con 70 de habilidad" {
+		
+		lucia.tocarEnElGrupo(pimpinela)
+		lucia.dejarElGrupo()
+		assert.equals(lucia.suHabilidad(),70)
+		
+		}
+		
+	test "Luis Alberto toca con la Fender y queda con 80 de habilidad" {
+		
+		luisAlberto.tocarConLa("fender")
+		assert.equals(luisAlberto.cuantaHabilidadTiene(),80)
+		
+		}
+		
+	test "Luis Alberto toca con la Gibson sana y queda con 100 de habilidad" {
+		
+		luisAlberto.tocarConLa("gibson")
+		assert.equals(luisAlberto.cuantaHabilidadTiene(),100)
+		
+		}
+		
+	test "Una persona rompe la Gibson y queda con 40 de habilidad" {
+		
+		luisAlberto.tocarConLa("gibson")
+		luisAlberto.romperGibson()
+		assert.equals(luisAlberto.cuantaHabilidadTiene(),40)
+		
+		}
+		
+	test "Joaquín no interpreta bien la canción “La Familia“" {
+		
+		joaquin.interpretaBien(laFamilia)
+		assert.notThat(false)
+		
+		}
+		
+	test "Joaquín interpreta bien la canción “Cisne“" {
+		
+		joaquin.interpretaBien(elCisne)
+		assert.that(true)
+		
+		}
+		
+	test "Lucia interpreta bien la canción “La Familia“" {
+		
+		lucia.interpretaBien(laFamilia)
+		assert.that(true)
+		
+		}
+		
+	test "Lucia no interpreta bien la canción “Cisne“" {
+		
+		lucia.interpretaBien(elCisne)
+		assert.notThat(false)
+		
+		}
+		
+	test "Luis Alberto interpreta bien la canción “La Familia“" {
+		
+		luisAlberto.interpretaBien(laFamilia)
+		assert.that(true)
+		
+		}
+		
+	test "Luis Alberto interpreta bien la canción “Cisne“" {
+		
+		luisAlberto.interpretaBien(elCisne)
+		assert.that(true)
+		
+		}
+		
+	test "Joaquín por la presentación del Luna Park cobra 50p" {
+		
+		assert.equals(joaquin.cuantoCobra(presentacionEnElLuna),50)
+		
+		}
+		
+	test "Joaquín actua solo en la presentación de la Trastienda del 15/11/2017 y cobra 100p" {
+		
+		presentacionEnLaTrastienda.joaquinActuaSolo()
+		assert.equals(joaquin.cuantoCobra(presentacionEnLaTrastienda),100)
+		
+		}
+		
+	test "la capacidad de La Trastienda para el 05 de agosto del 2017 es de 700 personas" {
+		
+		presentacionEnLaTrastienda.establecerElDiaQueCae("sabado")
+		assert.equals(presentacionEnLaTrastienda.calcularCapacidad(),700)
+		
+		}
+		
+	test "la capacidad de La Trastienda para el 08 de agosto del 2017 es de 400 personas" {
+		
+		assert.equals(presentacionEnLaTrastienda.calcularCapacidad(),400)
+		
+		}
+		
+	test "Lucia por la presentación del Luna Park cobra 500p" {
+		
+		assert.equals(lucia.cuantoCobra(presentacionEnElLuna),500)
+		
+		}
+		
+	test "Lucia por la presentación de la Trastienda cobra 400p" {
+		
+		presentacionEnLaTrastienda.calcularCapacidad()
+		assert.equals(lucia.cuantoCobra(presentacionEnLaTrastienda),400)
+		
+		}
+		
+	test "Luis Alberto por la presentación del Luna Park cobra 1000p" {
+		
+		assert.equals(luisAlberto.cuantoCobra(presentacionEnElLuna),1000)
+		
+		}
+		
+	test "Luis Alberto por la presentación de La Trastienda cobra 1200p" {
+		
+		assert.equals(luisAlberto.cuantoCobra(presentacionEnLaTrastienda),1200)
+		
+		}
+		
+	test "El costo de la presentacion en el Luna Park es de 1550p" {
+		
+		assert.equals(presentacionEnElLuna.costoDeLaPresentacion(),1550)
+		
+		}
+		
+	test "El costo de la presentacion en La Trastienda del 15/11/2017 es de 1650p" {
+		
+		presentacionEnLaTrastienda.calcularCapacidad()
+		assert.equals(presentacionEnLaTrastienda.costoDeLaPresentacion(),1650)
+		
+		}	
 }
