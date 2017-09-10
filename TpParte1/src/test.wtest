@@ -9,16 +9,27 @@ import elCisne.*
 
 describe "Los Tests"{
 	
-	test "Joaquín canta en el grupo Pimpinela y queda con 25 de habilidad" {
+	fixture {
 		
 		joaquin.tocarEnElGrupo(pimpinela)
+		lucia.tocarEnElGrupo(pimpinela)
+		joaquin.interpretaBien(laFamilia)
+		joaquin.interpretaBien(elCisne)
+		lucia.interpretaBien(laFamilia)
+		lucia.interpretaBien(elCisne)
+		luisAlberto.interpretaBien(laFamilia)
+		luisAlberto.interpretaBien(elCisne)
+		
+	}
+	
+	test "Joaquín canta en el grupo Pimpinela y queda con 25 de habilidad" {
+		
 		assert.equals(joaquin.suHabilidad(),25)
 		
 		}
 	
 	test "Joaquín canta en el grupo Pimpinela, deja el grupo y queda con 20 de habilidad" {
 		
-		joaquin.tocarEnElGrupo(pimpinela)
 		joaquin.dejarElGrupo()
 		assert.equals(joaquin.suHabilidad(),20)
 		
@@ -26,14 +37,12 @@ describe "Los Tests"{
 		
 	test "Lucia canta en el grupo Pimpinela y queda con 50 de habilidad" {
 		
-		lucia.tocarEnElGrupo(pimpinela)
 		assert.equals(lucia.suHabilidad(),50)
 		
 		}
 		
 	test "Lucia canta en el grupo Pimpinela, deja el grupo y queda con 70 de habilidad" {
 		
-		lucia.tocarEnElGrupo(pimpinela)
 		lucia.dejarElGrupo()
 		assert.equals(lucia.suHabilidad(),70)
 		
@@ -60,45 +69,39 @@ describe "Los Tests"{
 		assert.equals(luisAlberto.cuantaHabilidadTiene(),40)
 		
 		}
-		
+	
 	test "Joaquín no interpreta bien la canción “La Familia“" {
 		
-		joaquin.interpretaBien(laFamilia)
 		assert.notThat(false)
 		
 		}
 		
 	test "Joaquín interpreta bien la canción “Cisne“" {
 		
-		joaquin.interpretaBien(elCisne)
 		assert.that(true)
 		
 		}
 		
 	test "Lucia interpreta bien la canción “La Familia“" {
 		
-		lucia.interpretaBien(laFamilia)
 		assert.that(true)
 		
 		}
 		
 	test "Lucia no interpreta bien la canción “Cisne“" {
 		
-		lucia.interpretaBien(elCisne)
 		assert.notThat(false)
 		
 		}
 		
 	test "Luis Alberto interpreta bien la canción “La Familia“" {
 		
-		luisAlberto.interpretaBien(laFamilia)
 		assert.that(true)
 		
 		}
 		
 	test "Luis Alberto interpreta bien la canción “Cisne“" {
 		
-		luisAlberto.interpretaBien(elCisne)
 		assert.that(true)
 		
 		}
