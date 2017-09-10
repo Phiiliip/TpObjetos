@@ -60,4 +60,7 @@ object presentacionEnLaTrastienda {
 	
 	method consultarCapacidad() = capacidad
 	
+	method joaquinActuaSolo(){
+		interpretesDeLaNoche.remove(lucia)
+	}
 }
