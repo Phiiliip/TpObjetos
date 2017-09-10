@@ -59,39 +59,45 @@ test "Una persona rompe la Gibson y queda con 40 de habilidad" {
 	
 }
 
-test "Joaquín interpreta bien la canción “La Familia“" {
+test "Joaquín no interpreta bien la canción “La Familia“" {
 	
-	assert.equals(joaquin.interpretaBien(laFamilia),false)
+	joaquin.interpretaBien(laFamilia)
+	assert.notThat(false)
 	
 }
 
 test "Joaquín interpreta bien la canción “Cisne“" {
 	
-	assert.equals(joaquin.interpretaBien(elCisne),true)
+	joaquin.interpretaBien(elCisne)
+	assert.that(true)
 	
 }
 
 test "Lucia interpreta bien la canción “La Familia“" {
 	
-	assert.equals(lucia.interpretaBien(laFamilia),true)
+	lucia.interpretaBien(laFamilia)
+	assert.that(true)
 	
 }
 
-test "Lucia interpreta bien la canción “Cisne“" {
+test "Lucia no interpreta bien la canción “Cisne“" {
 	
-	assert.equals(lucia.interpretaBien(elCisne),false)
+	lucia.interpretaBien(elCisne)
+	assert.notThat(false)
 	
 }
 
 test "Luis Alberto interpreta bien la canción “La Familia“" {
 	
-	assert.equals(luisAlberto.interpretaBien(laFamilia),true)
+	luisAlberto.interpretaBien(laFamilia)
+	assert.that(true)
 	
 }
 
 test "Luis Alberto interpreta bien la canción “Cisne“" {
 	
-	assert.equals(luisAlberto.interpretaBien(elCisne),true)
+	luisAlberto.interpretaBien(elCisne)
+	assert.that(true)
 	
 }
 
