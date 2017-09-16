@@ -1,9 +1,14 @@
 
-object laFamilia {
-
-	const duracion = 264
+class Cancion {
 	
-	const letra = "Quiero brindar por mi gente sencilla, por el amor brindo por la familia"
+	var duracion 
+	
+	var letra
+	
+	constructor(duration, lyrics){
+		duracion = duration
+		letra = lyrics
+	}
 	
 	method contieneLaPalabra(unaPalabra){
 		return letra.contains(unaPalabra)
